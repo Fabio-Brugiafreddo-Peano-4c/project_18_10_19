@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project_18_10_19;
+package biblioteca;
 
-import bibblioteca.Book;
-import bibblioteca.Library;
+import javax.swing.JOptionPane;
+
+
 
 /**
  *
@@ -69,12 +70,13 @@ public class Main {
         //TO-DO: function: search for a book by title in All the Libraries
         //return Not Availabe or All the results ordered by price
         
-        String findIt = "TPSI";
+        String findIt = "";
+        findIt=JOptionPane.showInputDialog("inserisci nome");
         Book foundIt = new Book();
         //Book temp = new Book();
         //temp.setTitle(" ");
         
-        System.out.println(foundIt);
+        System.out.println(findIt);
         
          for(Book temp : libA.getBooks().values()){
                if(temp.getTitle().toString().compareTo(findIt) == 0) {
@@ -86,7 +88,7 @@ public class Main {
             }     
             
          }
-         for(Book temp : libA.getBooks().values()){
+         for(Book temp : libB.getBooks().values()){
              if(temp.getTitle().toString().compareTo(findIt) == 0) {
                  foundIt.setTitle(temp.getTitle());
                  foundIt.setWriter(temp.getWriter());
@@ -96,7 +98,7 @@ public class Main {
             }        
             
          }
-          for(Book temp : libA.getBooks().values()){
+          for(Book temp : libC.getBooks().values()){
              if(temp.getTitle().toString().compareTo(findIt) == 0) {
                  foundIt.setTitle(temp.getTitle());
                  foundIt.setWriter(temp.getWriter());
